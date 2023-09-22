@@ -38,7 +38,6 @@ const TodoItem = ({ todo, setRefresh }) => {
 
   // UPDATE TASK
   const changeTodo = () => {
-    // SPREAD OPERATOR
     const editedTodo = { ...todo, task: editText };
 
     fetch("http://localhost:8000/todos/" + todo.id, {

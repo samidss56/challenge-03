@@ -11,7 +11,7 @@ const TodoList = ({ isRefresh, setRefresh }) => {
   const navigate = useNavigate();
 
   const handleAddClick = () => {
-    navigate("/add"); // Navigasi ke halaman "Add.jsx"
+    navigate("/add");
   };
 
   useEffect(() => {

@@ -7,7 +7,6 @@ const Add = ({ setRefresh }) => {
   const navigate = useNavigate();
 
   const addTodo = () => {
-    // Logika penambahan tugas
     const newTodo = { task, complete: false };
 
     fetch("http://localhost:8000/todos", {

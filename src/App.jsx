@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Add from "./pages/Add";
@@ -7,7 +6,6 @@ import Add from "./pages/Add";
 function App() {
   const [isRefresh, setIsRefresh] = useState(true);
   const [filter] = useState("all");
-  // const [searchResults, setSearchResults] = useState([]);
   const [todos, setTodos] = useState([]);
 
   const setRefresh = (status) => {
@@ -15,8 +13,7 @@ function App() {
   };
 
   useEffect(() => {
-    // Efek pertama kali untuk memuat data todo list
-    fetch("http://localhost:4000/todos")
+    fetch("http://localhost:8000/todos")
       .then((res) => res.json())
       .then((data) => {
         setTodos(data);
